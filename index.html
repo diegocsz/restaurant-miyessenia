@@ -79,7 +79,7 @@
         <h2 id="menu-title" class="section-title" data-i18n="menu.title">Nuestra carta</h2>
         <p class="section-sub" data-i18n="menu.sub">Filtra por categoría y encuentra tu plato favorito.</p>
 
-        <div class="tabs" role="tablist" aria-label="Categorías del menú">
+        <nav class="tabs" role="tablist" aria-label="Categorías del menú">
           <button class="tab active" role="tab" aria-selected="true"  data-cat="all"      data-i18n="menu.tab.all">Todo</button>
           <button class="tab"        role="tab" aria-selected="false" data-cat="entradas" data-i18n="menu.tab.entradas">Entradas</button>
           <button class="tab"        role="tab" aria-selected="false" data-cat="pescados" data-i18n="menu.tab.pescados"c>Pesados</button>
@@ -89,14 +89,11 @@
           <button class="boton_categoria" data-category="carnes y pollos">Carnes y pollos</button>
              <button class="boton_categoria" data-category="duos y rondas">Duos y rondas</button>
              <button class="boton_categoria" data-category="bebidas">Bebidas</button>
-        </div>
+        </nav>
 
         <div class="menu-grid" id="menu-grid" role="list">
           <!-- Carta_Jose -->
-            <nav class="barra_categorias">
-             
-            </nav>
-            <main class="contenido" id="productos"> </main>
+          <main class="contenido" id="productos"> </main>
 
           <!-- ── ENTRADAS ── -->
           <article class="menu-card" data-cat="entradas" role="listitem">

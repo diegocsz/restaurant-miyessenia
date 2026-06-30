@@ -67,13 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
         tarjeta.classList.add("tarjeta_producto");
         
         tarjeta.innerHTML = `
-        <div class="imagen_producto">
-            <img src="${producto.img}" alt="${producto.nombre}" class="foto_plato">
+        <article class="menu-card" data-cat="entradas" role="listitem">
+          <div class="menu-img-wrap">
+            <img src="${producto.img}" alt="${producto.nombre}" class="menu-img" loading="lazy" ">
             <h3>${producto.nombre}</h3>
-        </div>
-        <div class="descripcion_producto">
-            <p>${producto.desc}</p>
-        </div>
+          </div>
+          <div class="menu-info">
+              <h3>${producto.nombre}</h3>
+              <p>${producto.desc}</p>
+          </div>
+        </article>
     `;
     
     contenedorProductos.appendChild(tarjeta);
