@@ -1,25 +1,9 @@
 
-.barra{
-    display: flex;
-    justify-content: space-between;
 
-}
-.titulo{
-    text-align: center;
-
-}
 .barra_categorias{
     display: flex;
     justify-content: space-around;
 }
-.main{
-    display: grid;
-    grid-template-columns: repeat(3,1fr)
-}
-body{
-    background-color: #ffffff;
-}
-
 
 .contenido {
     display: grid;
