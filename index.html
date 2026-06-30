@@ -1,11 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante Mi Yessenia </title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+
+  <!-- ░░ LANG BAR ░░ -->
+  <div id="lang-bar">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <span>|</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- ░░ ACCESSIBILITY PANEL ░░ -->
+  <div id="a11y-panel" aria-label="Panel de accesibilidad">
+    <button id="btn-contrast" title="Alto contraste" aria-pressed="false">◐</button>
+    <button id="btn-font-up" title="Aumentar texto" aria-label="Aumentar tamaño de texto">A+</button>
+    <button id="btn-font-down" title="Reducir texto" aria-label="Reducir tamaño de texto">A−</button>
+  </div>
+
+  <!-- ░░ NAV ░░ -->
+  <header id="site-header">
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a class="brand" href="#hero">
+        <div class="brand-logo">
+          <!-- LOGO DEL RESTAURANTE -->
+          <img src="imagenes/logo.png" alt="Logo Mi Yessenia" class="logo-img" />
+        </div>
+        <span class="brand-text">Mi Yessenia</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#menu"      data-i18n="nav.menu">Carta</a></li>
+        <li><a href="#galeria"   data-i18n="nav.galeria">Galería</a></li>
+        <li><a href="#historia"  data-i18n="nav.historia">Historia</a></li>
+        <li><a href="#contacto"  data-i18n="nav.contacto">Contacto</a></li>
+        <li><a href="#ubicacion" data-i18n="nav.ubicacion">Ubicación</a></li>
+        <li><a href="#cupones"   data-i18n="nav.cupones">Cupones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ░░ HERO ░░ -->
+    <section id="hero" aria-labelledby="hero-title">
+      <!-- IMAGEN DE FONDO DEL HERO: reemplaza hero.jpg con tu foto del restaurante o el mar -->
+      <div class="hero-bg">
+        <img src="imagenes/hero.jpg" alt="Restaurante Mi Yessenia en Cancas" class="hero-img" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Cancas · Ruta Máncora – Punta Sal</p>
+        <h1 id="hero-title" data-i18n="hero.title">Sabor de mar,<br><em>bienvenida de casa</em></h1>
+        <p class="hero-sub" data-i18n="hero.sub">Platillos frescos del Pacífico Norte, cocinados con sazón familiar desde la orilla.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#menu" data-i18n="hero.cta1">Ver la carta</a>
+          <a class="btn-ghost" href="https://wa.me/51999999999?text=Hola%2C%20quiero%20reservar%20una%20mesa" target="_blank" rel="noopener" data-i18n="hero.cta2">Reservar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ░░ MENÚ ░░ -->
+    <section id="menu" aria-labelledby="menu-title">
+      <div class="section-inner">
+        <span class="eyebrow" data-i18n="menu.eyebrow">Lo que cocinamos</span>
+        <h2 id="menu-title" class="section-title" data-i18n="menu.title">Nuestra carta</h2>
+        <p class="section-sub" data-i18n="menu.sub">Filtra por categoría y encuentra tu plato favorito.</p>
+
+        <div class="tabs" role="tablist" aria-label="Categorías del menú">
+          <button class="tab active" role="tab" aria-selected="true"  data-cat="all"      data-i18n="menu.tab.all">Todo</button>
+          <button class="tab"        role="tab" aria-selected="false" data-cat="entradas" data-i18n="menu.tab.entradas">Entradas</button>
+          <button class="tab"        role="tab" aria-selected="false" data-cat="pescados" data-i18n="menu.tab.pescados">Pescados</button>
+          <button class="tab"        role="tab" aria-selected="false" data-cat="bebidas"  data-i18n="menu.tab.bebidas">Bebidas</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid" role="list">
+
+          <!-- ── ENTRADAS ── -->
+          <article class="menu-card" data-cat="entradas" role="listitem">
+            <!-- FOTO DEL PLATO: reemplaza ceviche.jpg con la imagen del ceviche -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/ceviche.jpeg" alt="Ceviche de conchas" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.ceviche">Ceviche de conchas</h3>
+              <p data-i18n="plato.ceviche.desc">Conchas negras marinadas en limón, ají limo y cebolla morada.</p>
+              <span class="price">S/. 18</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="entradas" role="listitem">
+            <!-- FOTO DEL PLATO: causa.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/causa.jpg" alt="Causa de camarones" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.causa">Causa de camarones</h3>
+              <p data-i18n="plato.causa.desc">Papa amarilla sazonada, rellena con camarones salteados y palta.</p>
+              <span class="price">S/. 15</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="entradas" role="listitem">
+            <!-- FOTO DEL PLATO: leche-tigre.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/leche-tigre.jpg" alt="Leche de tigre" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.leche">Leche de tigre</h3>
+              <p data-i18n="plato.leche.desc">Fondo de ceviche con trozos de pescado, cancha y camote.</p>
+              <span class="price">S/. 10</span>
+            </div>
+          </article>
+
+          <!-- ── PESCADOS ── -->
+          <article class="menu-card" data-cat="pescados" role="listitem">
+            <!-- FOTO DEL PLATO: sudado.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/Sudado-pescado.jpg" alt="Sudado de pescado" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.sudado">Sudado de pescado</h3>
+              <p data-i18n="plato.sudado.desc">Corvina fresca en caldo de chicha de jora, tomate y ají amarillo.</p>
+              <span class="price">S/. 22</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="pescados" role="listitem">
+            <!-- FOTO DEL PLATO: pescado-frito.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/pescado-frito.jpg" alt="Pescado frito con arroz" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.frito">Pescado frito con arroz</h3>
+              <p data-i18n="plato.frito.desc">Lenguado entero frito, acompañado de arroz blanco, yuca y salsa criolla.</p>
+              <span class="price">S/. 20</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="pescados" role="listitem">
+            <!-- FOTO DEL PLATO: jalea.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/jalea.jpg" alt="Jalea " class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.jalea">Jalea mixta</h3>
+              <p data-i18n="plato.jalea.desc">Variedad de mariscos y pescado rebozado, con yuca frita y zarza criolla.</p>
+              <span class="price">S/. 28</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="pescados" role="listitem">
+            <!-- FOTO DEL PLATO: parihuela.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/parihuela.jpg" alt="Parihuela" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.parihuela">Parihuela</h3>
+              <p data-i18n="plato.parihuela.desc">Sopa marinera con cangrejos, almejas, filete y trozos de mariscos frescos.</p>
+              <span class="price">S/. 25</span>
+            </div>
+          </article>
+
+          <!-- ── BEBIDAS ── -->
+          <article class="menu-card" data-cat="bebidas" role="listitem">
+            <!-- FOTO DEL PLATO: chicha.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/chicha-morada.jpeg" alt="Chicha morada" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.chicha">Chicha morada</h3>
+              <p data-i18n="plato.chicha.desc">Bebida artesanal de maíz morado con clavo y canela.</p>
+              <span class="price">S/. 5</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="bebidas" role="listitem">
+            <!-- FOTO DEL PLATO: limonada.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/limonda.jpeg" alt="Limonada de la casa" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.limonada">Limonada de la casa</h3>
+              <p data-i18n="plato.limonada.desc">Limón sutil, azúcar y hierbabuena, servida bien fría.</p>
+              <span class="price">S/. 6</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-cat="bebidas" role="listitem">
+            <!-- FOTO DEL PLATO: cafe.jpg -->
+            <div class="menu-img-wrap">
+              <img src="imagenes/chicha.jpg" alt="Chicha de Maiz" class="menu-img" loading="lazy" />
+            </div>
+            <div class="menu-info">
+              <h3 data-i18n="plato.cafe">Café pasado</h3>
+              <p data-i18n="plato.cafe.desc">Café de grano norteño, servido en chusco.</p>
+              <span class="price">S/. 4</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ GALERÍA ░░ -->
+    <section id="galeria" aria-labelledby="galeria-title">
+      <div class="section-inner">
+        <span class="eyebrow" data-i18n="galeria.eyebrow">Momentos en el restaurante</span>
+        <h2 id="galeria-title" class="section-title" data-i18n="galeria.title">Galería</h2>
+        <p class="section-sub" data-i18n="galeria.sub">Haz clic en una foto para verla completa.</p>
+
+        <div class="gallery-grid">
+
+          <!-- FOTO 1: galeria1.jpg — foto del local, ambiente, etc. -->
+          <button class="gallery-item" aria-label="Ver foto 1" data-src="images/galeria1.jpg">
+            <img src="imagenes/galeria1.jpg" alt="Ambiente del restaurante Mi Yessenia" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+          <!-- FOTO 2: galeria2.jpg -->
+          <button class="gallery-item" aria-label="Ver foto 2" data-src="images/galeria2.jpg">
+            <img src="imagenes/galeria2.jpeg" alt="Platos del restaurante Mi Yessenia" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+          <!-- FOTO 3: galeria3.jpg -->
+          <button class="gallery-item" aria-label="Ver foto 3" data-src="images/galeria3.jpg">
+            <img src="imagenes/galeria3.jpg" alt="Vista del mar desde Cancas" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+          <!-- FOTO 4: galeria4.jpg -->
+          <button class="gallery-item" aria-label="Ver foto 4" data-src="images/galeria4.jpg">
+            <img src="imagenes/galeria4.jpg" alt="Cocina del restaurante" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+          <!-- FOTO 5: galeria5.jpg -->
+          <button class="gallery-item" aria-label="Ver foto 5" data-src="images/galeria5.jpg">
+            <img src="imagenes/galeria5.jpg" alt="Familia Mi Yessenia" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+          <!-- FOTO 6: galeria6.jpg -->
+          <button class="gallery-item" aria-label="Ver foto 6" data-src="images/galeria6.jpg">
+            <img src="imagenes/galeria6.jpg" alt="Pesca artesanal en Cancas" loading="lazy" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- LIGHTBOX -->
+      <div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+        <button id="lb-close" aria-label="Cerrar">&times;</button>
+        <button id="lb-prev" aria-label="Anterior">&#8249;</button>
+        <div id="lb-img-wrap">
+          <img id="lb-img" src="" alt="" />
+        </div>
+        <button id="lb-next" aria-label="Siguiente">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- ░░ HISTORIA ░░ -->
+    <section id="historia" aria-labelledby="historia-title">
+      <div class="section-inner historia-inner">
+        <div class="historia-text">
+          <span class="eyebrow" data-i18n="historia.eyebrow">Nuestra historia</span>
+          <h2 id="historia-title" class="section-title" data-i18n="historia.title">Del mar a la mesa,<br>desde siempre</h2>
+          <p data-i18n="historia.p1">Mi Yessenia nació en Cancas como un sueño familiar: trasladar el sabor del Pacífico Norte directamente al plato del viajero que recorre la Panamericana. Detrás de cada ceviche hay manos que conocen el mar.</p>
+          <p data-i18n="historia.p2">La pesca artesanal de Cancas es el alma del restaurante. Trabajamos con pescadores locales para garantizar que el producto llegue fresco cada mañana, honrando la tradición de la costa norte del Perú.</p>
+          <p data-i18n="historia.p3">Hoy, en la ruta Máncora – Cancas – Punta Sal, somos la parada donde el turista descansa y el lugareño se sienta como en casa.</p>
+        </div>
+        <!-- IMAGEN DE LA HISTORIA: historia.jpg — foto del local o la familia -->
+        <div class="historia-img-wrap">
+          <img src="imagenes/historia.jpg" alt="Historia del Restaurante Mi Yessenia" class="historia-foto" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACTO ░░ -->
+    <section id="contacto" aria-labelledby="contacto-title">
+      <div class="section-inner">
+        <span class="eyebrow" data-i18n="contacto.eyebrow">Estamos para ti</span>
+        <h2 id="contacto-title" class="section-title" data-i18n="contacto.title">Contáctanos</h2>
+        <p class="section-sub" data-i18n="contacto.sub">Reserva tu mesa o consulta lo que necesites.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://wa.me/51999999999?text=Hola%2C%20quiero%20reservar%20una%20mesa" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+            <!-- ICONO WHATSAPP: whatsapp.png -->
+            <div class="contact-img-wrap">
+              <img src="imagenes/whatsapp.png" alt="WhatsApp" class="contact-icon-img" />
+            </div>
+            <strong data-i18n="contacto.whatsapp">WhatsApp</strong>
+            <span data-i18n="contacto.whatsapp.sub">Reservas y consultas</span>
+          </a>
+          <a class="contact-card" href="tel:+51999999999" aria-label="Llamar al restaurante">
+            <!-- ICONO LLAMADA: llamada.png -->
+            <div class="contact-img-wrap">
+              <img src="imagenes/phone.png" alt="Llamar" class="contact-icon-img" />
+            </div>
+            <strong data-i18n="contacto.llamar">Llamar</strong>
+            <span>+51 999 999 999</span>
+          </a>
+          <div class="contact-card no-link">
+            <!-- ICONO HORARIO: horario.png -->
+            <div class="contact-img-wrap">
+              <img src="imagenes/horario.png" alt="Horario" class="contact-icon-img" />
+            </div>
+            <strong data-i18n="contacto.horario">Horario</strong>
+            <span data-i18n="contacto.horario.val">Lun – Dom · 8 am – 9 pm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ MAPA ░░ -->
+    <section id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="section-inner">
+        <span class="eyebrow" data-i18n="ubicacion.eyebrow">¿Dónde estamos?</span>
+        <h2 id="ubicacion-title" class="section-title" data-i18n="ubicacion.title">¿Cómo llegar?</h2>
+        <p class="section-sub" data-i18n="ubicacion.sub">Estamos sobre la Panamericana Norte, en Cancas — a 20 min al sur de Máncora.</p>
+        <div class="map-wrapper">
+          <iframe
+            id="map-frame"
+            title="Ubicación de Restaurante Mi Yessenia en Cancas"
+            width="100%"
+            height="420"
+            style="border:0; border-radius:16px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.124!2d-81.085!3d-4.027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDEnMzguMyJTIDgxwrAwNScwNi4wIlc!5e0!3m2!1ses!2spe!4v1719000000000">
+          </iframe>
+        </div>
+        <a class="btn-primary map-cta"
+           href="https://www.google.com/maps/dir/?api=1&destination=Cancas,Peru"
+           target="_blank" rel="noopener"
+           data-i18n="ubicacion.cta">
+          Abrir ruta en Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- ░░ CUPONES ░░ -->
+    <section id="cupones" aria-labelledby="cupones-title">
+      <div class="section-inner">
+        <span class="eyebrow" data-i18n="cupones.eyebrow">Premio por visitarnos</span>
+        <h2 id="cupones-title" class="section-title" data-i18n="cupones.title">¿Tienes un cupón?</h2>
+        <p class="section-sub" data-i18n="cupones.sub">Ingresa el código de tu ticket y califica tu experiencia para canjear tu beneficio.</p>
+        <div class="coupon-box">
+          <div class="stars-row" role="group" aria-label="Calificación del servicio">
+            <button class="star" data-val="1" aria-label="1 estrella">★</button>
+            <button class="star" data-val="2" aria-label="2 estrellas">★</button>
+            <button class="star" data-val="3" aria-label="3 estrellas">★</button>
+            <button class="star" data-val="4" aria-label="4 estrellas">★</button>
+            <button class="star" data-val="5" aria-label="5 estrellas">★</button>
+          </div>
+          <label for="coupon-input" class="sr-only">Código de cupón</label>
+          <input
+            type="text"
+            id="coupon-input"
+            placeholder="Código del ticket (ej. MIYESSENIA2025)"
+            maxlength="30"
+            autocomplete="off"
+            aria-describedby="coupon-status"
+          />
+          <button class="btn-primary" id="btn-validar" data-i18n="cupones.btn">Validar cupón</button>
+          <p id="coupon-status" role="alert" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ WHATSAPP FLOTANTE ░░ -->
+  <a class="whatsapp-float"
+     href="https://wa.me/51999999999?text=Hola%2C%20quiero%20reservar%20una%20mesa"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <!-- ICONO WHATSAPP FLOTANTE: whatsapp.png -->
+    <img src="imagenes/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <!-- LOGO EN FOOTER: logo.png -->
+        <img src="imagenes/logo.png" alt="Logo Mi Yessenia" class="footer-logo" />
+        <span class="brand-text">Mi Yessenia</span>
+        <p class="footer-tagline" data-i18n="footer.tagline">Del Pacífico Norte a tu mesa.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Pie de página">
+        <h3 data-i18n="footer.nav.title">Navegación</h3>
+        <ul>
+          <li><a href="#menu"      data-i18n="nav.menu">Carta</a></li>
+          <li><a href="#galeria"   data-i18n="nav.galeria">Galería</a></li>
+          <li><a href="#historia"  data-i18n="nav.historia">Historia</a></li>
+          <li><a href="#contacto"  data-i18n="nav.contacto">Contacto</a></li>
+          <li><a href="#ubicacion" data-i18n="nav.ubicacion">Ubicación</a></li>
+          <li><a href="#cupones"   data-i18n="nav.cupones">Cupones</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 data-i18n="footer.contact.title">Contáctanos</h3>
+        <p>Cancas, Tumbes, Perú<br>Panamericana Norte</p>
+        <p><a href="tel:+51999999999">+51 999 999 999</a></p>
+        <p><a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p><span data-i18n="contacto.horario.val">Lun – Dom · 8 am – 9 pm</span></p>
+      </div>
+
+      <div class="footer-social">
+        <h3 data-i18n="footer.social.title">Síguenos</h3>
+        <div class="social-links">
+          <!-- ICONO FACEBOOK: facebook.png -->
+          <a href="#" aria-label="Facebook de Mi Yessenia">
+            <img src="imagenes/facebook.png" alt="Facebook" class="social-icon-img" />
+          </a>
+          <!-- ICONO INSTAGRAM: instagram.png -->
+          <a href="#" aria-label="Instagram de Mi Yessenia">
+            <img src="imagenes/instagram.png" alt="Instagram" class="social-icon-img" />
+          </a>
+        </div>
+        <!-- FOTO DEL LOCAL EN FOOTER: footer-foto.jpg -->
+        <div class="footer-img-wrap">
+          <img src="imagenes/footer-foto.jpeg" alt="Restaurante Mi Yessenia" class="footer-foto" loading="lazy" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.bottom">© 2026 Restaurante Mi Yessenia · Cancas, Perú · Desarrollado por estudiantes UTP – Taller de Programación Web.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
