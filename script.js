@@ -274,9 +274,6 @@ const stars = document.querySelectorAll(".star");
 let selectedRating = 0;
 
 stars.forEach((estrellaIndividual) => {
-  // Eliminamos los eventos mouseenter y mouseleave 
-  // para quitar todo efecto de "movimiento" o previsualización.
-
   estrellaIndividual.addEventListener("click", () => {
     selectedRating = parseInt(estrellaIndividual.dataset.val);
     
