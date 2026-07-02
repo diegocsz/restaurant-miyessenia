@@ -207,12 +207,12 @@ let   lbIndex      = 0;
 
 function openLightbox(index) {
   lbIndex = index;
-  const src = galleryItems[index].dataset.src;
-  const alt = galleryItems[index].querySelector('img').alt;
-  lbImg.src = src;
-  lbImg.alt = alt;
+  // ... tu código base ...
   lightbox.hidden = false;
   document.body.style.overflow = 'hidden';
+  
+  // Guardamos cuál fue el elemento que abrió el lightbox
+  window.lastActiveElement = document.activeElement; 
   document.getElementById('lb-close').focus();
 }
 
@@ -220,7 +220,9 @@ function closeLightbox() {
   lightbox.hidden = true;
   lbImg.src = '';
   document.body.style.overflow = '';
-  galleryItems[lbIndex].focus();
+  
+  // Devolvemos el foco exactamente a la foto original de donde vino
+  if (window.lastActiveElement) window.lastActiveElement.focus(); 
 }
 
 function moveLightbox(dir) {
