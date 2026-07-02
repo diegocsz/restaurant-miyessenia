@@ -346,7 +346,7 @@ document.getElementById("btn-validar").addEventListener("click", async () => {
 
   if (arregloCuponesUsados.includes(hashTextoIntroducido)) {
     parrafoEstadoCupon.textContent =
-      "⚠️ Este cupón ya fue canjeado anteriormente.";
+      "Este cupón ya fue canjeado anteriormente.";
     parrafoEstadoCupon.className = "error";
     return;
   }
