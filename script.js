@@ -371,3 +371,4 @@ const observer = new IntersectionObserver(
 revealEls.forEach((elementoParaVigilar) =>
   observer.observe(elementoParaVigilar),
 );
+//XD
