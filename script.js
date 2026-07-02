@@ -134,24 +134,33 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 /* ─────────────────────────────────────────────
-   ACCESIBILIDAD — contraste y tamaño
-   (en memoria de sesión, no localStorage)
+   ACCESIBILIDAD — Modificado con memoria persistente
 ───────────────────────────────────────────── */
-let fontScale    = 1;
-let highContrast = false;
+let fontScale    = parseFloat(localStorage.getItem('fontScale')) || 1;
+let highContrast = localStorage.getItem('highContrast') === 'true';
+
+// Aplicar estados iniciales guardados
+document.documentElement.style.setProperty('--fs-scale', fontScale);
+document.body.classList.toggle('high-contrast', highContrast);
+document.getElementById('btn-contrast').setAttribute('aria-pressed', String(highContrast));
 
 document.getElementById('btn-font-up').addEventListener('click', () => {
   fontScale = Math.min(1.5, fontScale + 0.1);
   document.documentElement.style.setProperty('--fs-scale', fontScale);
+  localStorage.setItem('fontScale', fontScale); // 💾 Guarda
 });
+
 document.getElementById('btn-font-down').addEventListener('click', () => {
   fontScale = Math.max(0.85, fontScale - 0.1);
   document.documentElement.style.setProperty('--fs-scale', fontScale);
+  localStorage.setItem('fontScale', fontScale); // 💾 Guarda
 });
+
 document.getElementById('btn-contrast').addEventListener('click', () => {
   highContrast = !highContrast;
   document.body.classList.toggle('high-contrast', highContrast);
   document.getElementById('btn-contrast').setAttribute('aria-pressed', String(highContrast));
+  localStorage.setItem('highContrast', highContrast); // 💾 Guarda
 });
 
 /* ─────────────────────────────────────────────
