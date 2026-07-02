@@ -269,41 +269,26 @@ document.addEventListener("keydown", (eventoTeclado) => {
   if (eventoTeclado.key === "ArrowRight") moveLightbox(1);
 });
 
-// Sistema de Calificación (Estrellas)
+// Sistema de Calificación (Solo Click)
 const stars = document.querySelectorAll(".star");
 let selectedRating = 0;
 
 stars.forEach((estrellaIndividual) => {
-  estrellaIndividual.addEventListener("mouseenter", () => {
-    const valorEstrellaActual = parseInt(estrellaIndividual.dataset.val);
-    stars.forEach((estrellaParaIluminar) =>
-      estrellaParaIluminar.classList.toggle(
-        "lit",
-        parseInt(estrellaParaIluminar.dataset.val) <= valorEstrellaActual,
-      ),
-    );
-  });
-
-  estrellaIndividual.addEventListener("mouseleave", () => {
-    stars.forEach((estrellaParaRestaurar) =>
-      estrellaParaRestaurar.classList.toggle(
-        "lit",
-        parseInt(estrellaParaRestaurar.dataset.val) <= selectedRating,
-      ),
-    );
-  });
+  // Eliminamos los eventos mouseenter y mouseleave 
+  // para quitar todo efecto de "movimiento" o previsualización.
 
   estrellaIndividual.addEventListener("click", () => {
     selectedRating = parseInt(estrellaIndividual.dataset.val);
-    stars.forEach((estrellaParaFijar) =>
-      estrellaParaFijar.classList.toggle(
+    
+    // Solo actualizamos las estrellas al hacer clic
+    stars.forEach((estrella) => {
+      estrella.classList.toggle(
         "lit",
-        parseInt(estrellaParaFijar.dataset.val) <= selectedRating,
-      ),
-    );
+        parseInt(estrella.dataset.val) <= selectedRating
+      );
+    });
   });
 });
-
 // Validación de Cupones de Descuento
 const VALID_HASHES = new Set([
   "a5a3f89e9fb1f98b4a39c1bfec97f453f43b1e84e07e5f92c0d77b68f96ac50a", // MIYESSENIA2025

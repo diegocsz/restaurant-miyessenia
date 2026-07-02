@@ -190,16 +190,6 @@ button { font-family: var(--font-body); }
 .hero-sub, .texto_subtitulo_presentacion { font-size: 1.12rem; color: rgba(255,255,255,0.82); max-width: 520px; margin-bottom: 38px; }
 .hero-ctas, .grupo_botones_accion { display: flex; flex-wrap: wrap; gap: 16px; }
 
-.hero-scroll-hint, .indicador_animado_desplazamiento { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 1; }
-.hero-scroll-hint span, .punto_animado_scroll { display: block; width: 24px; height: 40px; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; position: relative; }
-.hero-scroll-hint span::after, .punto_animado_scroll::after {
-  content: ''; position: absolute;
-  top: 6px; left: 50%; transform: translateX(-50%);
-  width: 4px; height: 8px; background: rgba(255,255,255,0.6);
-  border-radius: 2px; animation: scroll-bounce 1.6s infinite;
-}
-@keyframes scroll-bounce { 0%,100%{top:6px;opacity:1} 50%{top:18px;opacity:0.3} }
-
 /* COMPONENTE CARTA Y PRODUCTOS DINÁMICOS */
 #menu, .seccion_carta_productos { background: var(--sand); }
 .tabs, .barra_pestanas_categorias { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
@@ -339,7 +329,6 @@ button { font-family: var(--font-body); }
 .stars-row, .fila_estrellas_calificacion { display: flex; justify-content: center; gap: 10px; }
 .star, .elemento_estrella_interactiva { background: none; border: none; font-size: 2.4rem; color: rgba(255,255,255,0.25); cursor: pointer; transition: color var(--transition), transform 0.15s; }
 .star.lit, .elemento_estrella_interactiva.lit { color: #FFD700; }
-.star:hover, .elemento_estrella_interactiva:hover { transform: scale(1.2); }
 
 #coupon-input, .campo_entrada_codigo_texto {
   width: 100%; padding: 14px 18px; border-radius: var(--radius-sm);
@@ -356,7 +345,7 @@ button { font-family: var(--font-body); }
   position: fixed; bottom: 28px; right: 24px; z-index: 800;
   width: 58px; height: 58px; border-radius: 50%; background: #9fe6b9;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .whatsapp-float:hover, .enlace_flotante_comunicacion_directa:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
