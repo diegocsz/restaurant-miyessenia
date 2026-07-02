@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   cargarMenu();
+  applyLang(currentLang);
+
   window.renderizarProductosGlobal = renderizarProductos;
 });
 
@@ -384,8 +386,3 @@ const observer = new IntersectionObserver(
 revealEls.forEach((elementoParaVigilar) =>
   observer.observe(elementoParaVigilar),
 );
-
-// Inicialización de la Aplicación
-document.addEventListener("DOMContentLoaded", () => {
-  applyLang(currentLang);
-});
