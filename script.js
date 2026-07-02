@@ -1,46 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1.   La "Base de Datos" de platos de "Mi Yessenia"
-    const listaProductos = [
-        // --- PESCADOS ---
-       { id: 1, nombre: "Ceviche de Filete", categoria: "pescados", img:"img/cevichefilete.png", desc: "Pescado fresco marinado en limón norteño y ají"},
-       { id: 2, nombre: "Ceviche de Caballa", categoria: "pescados", img:"img/cevichecaballa.png", desc: "Caballa fresca marinada en limón norteño y especias"},
-       { id: 3, nombre: "Sudado de Pescado", categoria: "pescados", img:"img/sudadopescado.png", desc: "Concentrado de pescado con chicha de jora, tomate, cebolla y un toque de ají."},
-       { id: 4, nombre: "Pasado por Agua", categoria: "pescados", img:"img/pasadoporagua.png", desc: "Pescado pasado por agua caliente acompañado con yuca y sarsa criolla."},
-       { id: 5, nombre: "Chicharron", categoria: "pescados", img:"img/chicharronpescado.png", desc: " Pescado cortado en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla" },
-       { id: 6, nombre: "Jalea", categoria: "pescados", img:"img/jaleapescado.png", desc: "Pescado cortado en trozos crocante acompañado de yuca frita y sarsa criolla" },
-       { id: 7, nombre: "Frito", categoria: "pescados", img:"img/frito.jpeg", desc: "Pieza de pescado frito acompañado de arroz, plátanos y sarsa criolla" },
-
-       // --- MARISCOS ---
-       { id: 8, nombre: "Arroz con Mariscos", categoria: "mariscos", desc: "Arroz mezclado con salsa cremosa picante y mixtura de mariscos" },
-       { id: 9, nombre: "Ceviche Mixto", categoria: "mariscos", desc: "Mixtura de mariscos y pescado fresco marinado en limón norteño y ají." },
-       { id: 10, nombre: "Chicharron Mixto", categoria: "mariscos", desc: " Mixtura de mariscos y pescado cortado en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla." },
-       { id: 11, nombre: "Sudado con Mariscos", categoria: "mariscos", desc: " Concentrado de pescado y mariscos con chicha de jora, tomate, cebolla y un toque de ají." },
-       { id: 12, nombre: "Jalea Mixta", categoria: "mariscos", desc: "Pescado cortado en trozos y mixtura de mariscos crocantes acompañado de yuca frita y sarsa criolla." },
-       { id: 13, nombre: "Majariscos", categoria: "mariscos", desc: "Combinación de majado (plátano verde frito y chancado) mezclado con una salsa jugosa de mariscos." },
-       { id: 14, nombre: "Picante de Mariscos", categoria: "mariscos", desc: "Guiso de mariscos frescos bañados en salsa cremosa y picante ." },
-
-       // --- CARNES Y POLLO ---
-       { id: 15, nombre: "Lomo Saltado", categoria: "carnes y pollos", desc: "Carne de res cortada en cubos salteada con cebolla, tomate y papas." },
-       { id: 16, nombre: "Lomo a la Plancha", categoria: "carnes y pollos", desc: "Filete de res cocinado con poco aceite acompañada con arroz y papas fritas." },
-       { id: 17, nombre: "Lomo a lo Pobre", categoria: "carnes y pollos", desc: "Filete de res frito acompañado con huevo a la inglesa, arroz, plátanos y papas fritas." },
-       { id: 18, nombre: "Pollo Saltado ", categoria: "carnes y pollos", desc: "Pollo cortado en cubos salteado con cebolla, tomate y papas." },
-       { id: 19, nombre: "Chicharron de Pollo ", categoria: "carnes y pollos", desc: " Pollo cortado en tiras pequeñas fritas y crocantes acompañadas con papas fritas y cremas." },
-       { id: 20, nombre: "Chaufa de Pollo ", categoria: "carnes y pollos", desc: "Salteado de arroz con trozos de pollo, huevo, verduras y salsa de soja, cocinado a fuego muy alto." },
-       { id: 21, nombre: "Chaufa de Carne ", categoria: "carnes y pollos", desc: "Salteado de arroz con trozos de carne, huevo, verduras y salsa de soja, cocinado a fuego muy alto." },
-       { id: 22, nombre: "Milanesa de Pollo ", categoria: "carnes y pollos", desc: "Filete fino de pechuga de pollo que se pasa por harina, huevo batido y pan rallado, para luego freírse." },
-
-       // --- COMBOS Y RONDAS ---
-       { id: 23, nombre: "Dúo Marino", categoria: "duos y rondas", desc: " Elije tu combinación perfecta, dos platos en uno: Ceviche clásico, un crocante chicharrón de pescado, arroz con mariscos." },
-       { id: 24, nombre: "Trio Marino", categoria: "duos y rondas", desc: "Combinación perfecta, tres platos en uno: Ceviche clásico, un crocante chicharrón de pescado y arroz con mariscos." },
-       { id: 25, nombre: "Ronda Marina", categoria: "duos y rondas", desc: "Porciones seleccionas, la combinación perfecta para compartir: Ceviche clásico, crocante chicharrón de pescado, arroz con mariscos y jalea de pescado." },
-
-       // --- BEBIDAS ---
-       { id: 26, nombre: "Clarito", categoria: "bebidas", desc: "Bebida refrescante y suave tradicional del norte peruano." },
-       { id: 27, nombre: "Chicha de jora", categoria: "bebidas", desc: "Bebida ancestral elaborada a base de maíz malteado o germinado, tradicional del norte peruano." },
-       { id: 28, nombre: "Inka Cola", categoria: "bebidas", desc: "Bebida gaseosa en diferentes formatos: personal, mediano y familiar." },
-       { id: 29, nombre: "Coca Cola", categoria: "bebidas", desc: "Bebida gaseosa en diferentes formatos: personal, mediano y familiar." },
-       { id: 30, nombre: "Guaraná", categoria: "bebidas", desc: "Bebida gaseosa en diferentes formatos: personal, mediano y familiar." }
-    ];
+    // 1. Declaramos la variable que guardará los platos del JSON
+    let listaProductos = [];
 
     // 2. Selección de los elementos de tu HTML
     const contenedorProductos = document.getElementById("productos");
@@ -48,251 +8,127 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Función encargada de borrar y dibujar los platos en el <main>
     function renderizarProductos(categoriaSeleccionada) {
-        // Limpiamos el contenedor para que no se dupliquen
         contenedorProductos.innerHTML = "";
 
-        // Filtramos el array para conservar solo los productos de la categoría elegida
+        // Filtramos usando la lista cargada desde el JSON
         const productosFiltrados = listaProductos.filter(producto => producto.categoria === categoriaSeleccionada);
 
-        // Si la categoría está vacía en nuestra "base de datos", mostramos un aviso breve
         if (productosFiltrados.length === 0) {
-            contenedorProductos.innerHTML = `<p class="mensaje-vacio">Próximamente más platos en esta sección...</p>`;
+            // Ajustado para usar las traducciones de idioma de tu segundo bloque de código
+            const msgVacio = translations[currentLang]?.['msg.vacio'] || "Próximamente más platos en esta sección...";
+            contenedorProductos.innerHTML = `<p class="mensaje-vacio">${msgVacio}</p>`;
             return;
         }
 
-        // Construimos e insertamos el HTML de las tarjetas
-       // Dentro de tu función renderizarProductos...
         productosFiltrados.forEach(producto => {
-        const tarjeta = document.createElement("div");
-        tarjeta.classList.add("tarjeta_producto");
-        
-        tarjeta.innerHTML = `
-        <article class="menu-card" data-cat="entradas" role="listitem">
-          <div class="menu-img-wrap">
-            <img src="${producto.img}" alt="${producto.nombre}" class="menu-img" loading="lazy" ">
-            <h3>${producto.nombre}</h3>
-          </div>
-          <div class="menu-info">
-              <h3>${producto.nombre}</h3>
-              <p>${producto.desc}</p>
-          </div>
-        </article>
-    `;
-    
-    contenedorProductos.appendChild(tarjeta);
-});
+            const tarjeta = document.createElement("div");
+            tarjeta.classList.add("tarjeta_producto");
+            
+            // Integración con tus traducciones dinámicas por ID de producto
+            const nombreTraducido = translations[currentLang]?.[`prod.name.${producto.id}`] || producto.nombre;
+            const descTraducida = translations[currentLang]?.[`prod.desc.${producto.id}`] || producto.desc;
+            
+            // Si el objeto no tiene imagen asignada en el JSON, colocamos una por defecto
+            const rutaImagen = producto.img || "img/default.png";
+
+            tarjeta.innerHTML = `
+            <article class="menu-card" data-cat="${producto.categoria}" role="listitem">
+              <div class="menu-img-wrap">
+                <img src="${rutaImagen}" alt="${nombreTraducido}" class="menu-img" loading="lazy">
+                <h3>${nombreTraducido}</h3>
+              </div>
+              <div class="menu-info">
+                  <h3>${nombreTraducido}</h3>
+                  <p>${descTraducida}</p>
+              </div>
+            </article>
+            `;
+            
+            contenedorProductos.appendChild(tarjeta);
+        });
     }
 
     // 4. Asignar el evento "click" a tus botones
     botonesCategoria.forEach(boton => {
         boton.addEventListener("click", () => {
-            // Quitamos la clase 'active' de todos los botones y se la ponemos al que presionaron
             botonesCategoria.forEach(btn => btn.classList.remove("active"));
             boton.classList.add("active");
 
-            // Leemos el data-category exacto de tu HTML
             const categoria = boton.getAttribute("data-category");
-            
-            // Renderizamos los productos filtrados
             renderizarProductos(categoria);
         });
     });
 
-    // 5. Carga inicial: Muestra "Pescados" por defecto al abrir la web
-    // Buscamos el primer botón para activar su color y cargar sus datos automáticamente
-    if(botonesCategoria.length > 0) {
-        botonesCategoria[0].classList.add("active");
-        renderizarProductos(botonesCategoria[0].getAttribute("data-category"));
+    // 5. NUEVA CARGA INICIAL: Traer los datos del JSON mediante Fetch API
+    async function cargarMenu() {
+        try {
+            // Cambia "productos.json" por la ruta correcta si está en otra carpeta (ej: "./data/productos.json")
+            const respuesta = await fetch("productos.json");
+            if (!respuesta.ok) {
+                throw new Error("No se pudo cargar el archivo de productos");
+            }
+            listaProductos = await respuesta.json();
+
+            // Una vez cargados los datos, ejecutamos la inicialización por defecto
+            if(botonesCategoria.length > 0) {
+                botonesCategoria[0].classList.add("active");
+                renderizarProductos(botonesCategoria[0].getAttribute("data-category"));
+            }
+        } catch (error) {
+            console.error("Error al inicializar la carta:", error);
+            contenedorProductos.innerHTML = `<p class="mensaje-vacio">Error al cargar el menú. Inténtalo más tarde.</p>`;
+        }
     }
+
+    // Ejecutamos la carga del JSON
+    cargarMenu();
+    
+    // Hacemos que la función sea accesible de forma global para que applyLang() pueda llamarla al cambiar idiomas
+    window.renderizarProductosGlobal = renderizarProductos;
 });
 
-
-
-'use strict';
-const translations = {
-  es: {
-    'nav.menu':      'Carta',
-    'nav.galeria':   'Galería',
-    'nav.historia':  'Historia',
-    'nav.contacto':  'Contacto',
-    'nav.ubicacion': 'Ubicación',
-    'nav.cupones':   'Cupones',
-
-    'hero.eyebrow': 'Cancas · Ruta Máncora – Punta Sal',
-    'hero.title':   'Sabor de mar,<br><em>bienvenida de casa</em>',
-    'hero.sub':     'Platillos frescos del Pacífico Norte, cocinados con sazón familiar desde la orilla.',
-    'hero.cta1':    'Ver la carta',
-    'hero.cta2':    'Reservar por WhatsApp',
-
-    'menu.eyebrow':      'Lo que cocinamos',
-    'menu.title':        'Nuestra carta',
-    'menu.sub':          'Filtra por categoría y encuentra tu plato favorito.',
-    'menu.tab.all':      'Todo',
-    'menu.tab.entradas': 'Entradas',
-    'menu.tab.pescados': 'Pescados',
-    'menu.tab.bebidas':  'Bebidas',
-
-    'plato.ceviche':        'Ceviche de conchas',
-    'plato.ceviche.desc':   'Conchas negras marinadas en limón, ají limo y cebolla morada.',
-    'plato.causa':          'Causa de camarones',
-    'plato.causa.desc':     'Papa amarilla sazonada, rellena con camarones salteados y palta.',
-    'plato.leche':          'Leche de tigre',
-    'plato.leche.desc':     'Fondo de ceviche con trozos de pescado, cancha y camote.',
-    'plato.sudado':         'Sudado de pescado',
-    'plato.sudado.desc':    'Corvina fresca en caldo de chicha de jora, tomate y ají amarillo.',
-    'plato.frito':          'Pescado frito con arroz',
-    'plato.frito.desc':     'Lenguado entero frito, acompañado de arroz blanco, yuca y salsa criolla.',
-    'plato.jalea':          'Jalea mixta',
-    'plato.jalea.desc':     'Variedad de mariscos y pescado rebozado, con yuca frita y zarza criolla.',
-    'plato.parihuela':      'Parihuela',
-    'plato.parihuela.desc': 'Sopa marinera con cangrejos, almejas, filete y trozos de mariscos frescos.',
-    'plato.chicha':         'Chicha morada',
-    'plato.chicha.desc':    'Bebida artesanal de maíz morado con clavo y canela.',
-    'plato.limonada':       'Limonada de la casa',
-    'plato.limonada.desc':  'Limón sutil, azúcar y hierbabuena, servida bien fría.',
-    'plato.cafe':           'Café pasado',
-    'plato.cafe.desc':      'Café de grano norteño, servido en chusco.',
-
-    'galeria.eyebrow': 'Momentos en el restaurante',
-    'galeria.title':   'Galería',
-    'galeria.sub':     'Haz clic en una foto para verla completa.',
-
-    'historia.eyebrow': 'Nuestra historia',
-    'historia.title':   'Del mar a la mesa,<br>desde siempre',
-    'historia.p1':      'Mi Yessenia nació en Cancas como un sueño familiar: trasladar el sabor del Pacífico Norte directamente al plato del viajero que recorre la Panamericana. Detrás de cada ceviche hay manos que conocen el mar.',
-    'historia.p2':      'La pesca artesanal de Cancas es el alma del restaurante. Trabajamos con pescadores locales para garantizar que el producto llegue fresco cada mañana, honrando la tradición de la costa norte del Perú.',
-    'historia.p3':      'Hoy, en la ruta Máncora – Cancas – Punta Sal, somos la parada donde el turista descansa y el lugareño se sienta como en casa.',
-
-    'contacto.eyebrow':     'Estamos para ti',
-    'contacto.title':       'Contáctanos',
-    'contacto.sub':         'Reserva tu mesa o consulta lo que necesites.',
-    'contacto.whatsapp':    'WhatsApp',
-    'contacto.whatsapp.sub':'Reservas y consultas',
-    'contacto.llamar':      'Llamar',
-    'contacto.horario':     'Horario',
-    'contacto.horario.val': 'Lun – Dom · 8 am – 9 pm',
-
-    'ubicacion.eyebrow': '¿Dónde estamos?',
-    'ubicacion.title':   '¿Cómo llegar?',
-    'ubicacion.sub':     'Estamos sobre la Panamericana Norte, en Cancas — a 20 min al sur de Máncora.',
-    'ubicacion.cta':     'Abrir ruta en Google Maps',
-
-    'cupones.eyebrow': 'Premio por visitarnos',
-    'cupones.title':   '¿Tienes un cupón?',
-    'cupones.sub':     'Ingresa el código de tu ticket y califica tu experiencia para canjear tu beneficio.',
-    'cupones.btn':     'Validar cupón',
-    'cupones.ok':      '✅ ¡Cupón válido! Muestra esta pantalla en caja para tu beneficio.',
-    'cupones.err':     '❌ Código no válido. Verifica el ticket e inténtalo de nuevo.',
-    'cupones.empty':   'Por favor ingresa el código de tu ticket.',
-
-    'footer.tagline':       'Del Pacífico Norte a tu mesa.',
-    'footer.nav.title':     'Navegación',
-    'footer.contact.title': 'Contáctanos',
-    'footer.social.title':  'Síguenos',
-    'footer.bottom':        '© 2026 Restaurante Mi Yessenia · Cancas, Perú · Desarrollado por estudiantes UTP – Taller de Programación Web.',
-  },
-
-  en: {
-    'nav.menu':      'Menu',
-    'nav.galeria':   'Gallery',
-    'nav.historia':  'Story',
-    'nav.contacto':  'Contact',
-    'nav.ubicacion': 'Location',
-    'nav.cupones':   'Coupons',
-
-    'hero.eyebrow': 'Cancas · Route Máncora – Punta Sal',
-    'hero.title':   'Taste of the sea,<br><em>warmth of home</em>',
-    'hero.sub':     'Fresh dishes from the Northern Pacific, cooked with family tradition right on the shore.',
-    'hero.cta1':    'View the menu',
-    'hero.cta2':    'Book via WhatsApp',
-
-    'menu.eyebrow':      'What we cook',
-    'menu.title':        'Our menu',
-    'menu.sub':          'Filter by category and find your favourite dish.',
-    'menu.tab.all':      'All',
-    'menu.tab.entradas': 'Starters',
-    'menu.tab.pescados': 'Seafood',
-    'menu.tab.bebidas':  'Drinks',
-
-    'plato.ceviche':        'Black clam ceviche',
-    'plato.ceviche.desc':   'Black clams marinated in lime, ají limo chilli and red onion.',
-    'plato.causa':          'Prawn causa',
-    'plato.causa.desc':     'Seasoned yellow potato filled with sautéed prawns and avocado.',
-    'plato.leche':          "Tiger's milk",
-    'plato.leche.desc':     'Ceviche base with fish pieces, toasted corn and sweet potato.',
-    'plato.sudado':         'Steamed fish',
-    'plato.sudado.desc':    'Fresh sea bass steamed in chicha de jora broth with tomato and ají amarillo.',
-    'plato.frito':          'Fried fish with rice',
-    'plato.frito.desc':     'Whole fried sole, served with white rice, yuca and criolla sauce.',
-    'plato.jalea':          'Mixed jalea',
-    'plato.jalea.desc':     'Assorted battered seafood and fish with fried yuca and criolla relish.',
-    'plato.parihuela':      'Parihuela',
-    'plato.parihuela.desc': 'Seafood chowder with crab, clams, fillet and fresh shellfish.',
-    'plato.chicha':         'Purple corn chicha',
-    'plato.chicha.desc':    'Artisan purple corn drink with clove and cinnamon.',
-    'plato.limonada':       'House lemonade',
-    'plato.limonada.desc':  'Subtle lime, sugar and mint, served ice cold.',
-    'plato.cafe':           'Drip coffee',
-    'plato.cafe.desc':      'Northern grain coffee, served in a traditional clay cup.',
-
-    'galeria.eyebrow': 'Moments at the restaurant',
-    'galeria.title':   'Gallery',
-    'galeria.sub':     'Click a photo to view it full size.',
-
-    'historia.eyebrow': 'Our story',
-    'historia.title':   'From the sea to the table,<br>always',
-    'historia.p1':      "Mi Yessenia was born in Cancas as a family dream: to bring the flavour of the Northern Pacific directly to the plate of every traveller on the Panamericana. Behind every ceviche are hands that know the sea.",
-    'historia.p2':      "Artisan fishing in Cancas is the soul of the restaurant. We work with local fishermen to ensure the product arrives fresh every morning, honouring the tradition of Peru's northern coast.",
-    'historia.p3':      'Today, on the Máncora – Cancas – Punta Sal route, we are the stop where the tourist rests and the local feels at home.',
-
-    'contacto.eyebrow':     'We are here for you',
-    'contacto.title':       'Contact us',
-    'contacto.sub':         'Book your table or ask whatever you need.',
-    'contacto.whatsapp':    'WhatsApp',
-    'contacto.whatsapp.sub':'Bookings & enquiries',
-    'contacto.llamar':      'Call us',
-    'contacto.horario':     'Opening hours',
-    'contacto.horario.val': 'Mon – Sun · 8 am – 9 pm',
-
-    'ubicacion.eyebrow': 'Where are we?',
-    'ubicacion.title':   'How to get here?',
-    'ubicacion.sub':     'We are on the Panamericana Norte in Cancas — 20 min south of Máncora.',
-    'ubicacion.cta':     'Open route in Google Maps',
-
-    'cupones.eyebrow': 'Reward for visiting us',
-    'cupones.title':   'Got a coupon?',
-    'cupones.sub':     'Enter the code from your ticket and rate your experience to redeem your benefit.',
-    'cupones.btn':     'Validate coupon',
-    'cupones.ok':      '✅ Valid coupon! Show this screen at the till to receive your benefit.',
-    'cupones.err':     '❌ Invalid code. Check your ticket and try again.',
-    'cupones.empty':   'Please enter the code from your ticket.',
-
-    'footer.tagline':       'From the Northern Pacific to your table.',
-    'footer.nav.title':     'Navigation',
-    'footer.contact.title': 'Contact',
-    'footer.social.title':  'Follow us',
-    'footer.bottom':        '© 2026 Restaurante Mi Yessenia · Cancas, Peru · Developed by UTP students – Web Programming Workshop.',
-  }
-};
-
 /* ─────────────────────────────────────────────
-   IDIOMA — guardado en localStorage
+   IDIOMA — Cargado dinámicamente desde archivos JSON
 ───────────────────────────────────────────── */
 let currentLang = localStorage.getItem('lang') || 'es';
+let translations = {}; // Empezamos vacío, se llenará con el fetch
 
-function applyLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('lang', lang);           // ← guarda en localStorage
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const val = translations[lang]?.[el.dataset.i18n];
-    if (val !== undefined) el.innerHTML = val;
-  });
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
+// Función asíncrona para aplicar el idioma cargando su respectivo JSON
+async function applyLang(lang) {
+  try {
+    // 1. Buscamos el archivo JSON correspondiente al idioma
+    const response = await fetch(`lang/${lang}.json`);
+    if (!response.ok) throw new Error(`No se pudo cargar el idioma: ${lang}`);
+    
+    translations = await response.json();
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    // 2. Traducimos los elementos estáticos del HTML que usan data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const val = translations[el.dataset.i18n];
+      if (val !== undefined) el.innerHTML = val;
+    });
+
+    // 3. Actualizamos el estado visual de los botones de cambio de idioma
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // 4. Forzamos el re-renderizado de los productos dinámicos con el nuevo idioma
+    if (typeof window.renderizarProductosGlobal === 'function') {
+      const botonActivo = document.querySelector('.boton_categoria.active');
+      if (botonActivo) {
+        window.renderizarProductosGlobal(botonActivo.getAttribute("data-category"));
+      }
+    }
+  } catch (error) {
+    console.error("Error al cambiar de idioma:", error);
+  }
 }
 
+// Escuchador de clics para los botones de idioma
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
@@ -479,6 +315,9 @@ const observer = new IntersectionObserver(entries => {
 revealEls.forEach(el => observer.observe(el));
 
 /* ─────────────────────────────────────────────
-   INIT
+   INIT — Carga inicial controlada
 ───────────────────────────────────────────── */
-applyLang(currentLang);   // restaura idioma guardado en localStorage
+// Esperamos a que el DOM esté listo para cargar el idioma por defecto
+document.addEventListener("DOMContentLoaded", () => {
+  applyLang(currentLang);
+});
