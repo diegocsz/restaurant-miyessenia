@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const rutaImagenFinal = producto.img || "img/default.png";
 
       tarjetaContenedora.innerHTML = `
-            <article class="menu-card" data-cat="${producto.categoria}" role="listitem">
+            <article class="menu-card" data-cat="${producto.categoria}">
               <div class="menu-img-wrap">
                 <img src="${rutaImagenFinal}" alt="${nombreTraducido}" class="menu-img" loading="lazy">
                 <h3>${nombreTraducido}</h3>
