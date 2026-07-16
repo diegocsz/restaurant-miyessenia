@@ -52,42 +52,49 @@
     "id": 8,
     "nombre": "Arroz con Mariscos",
     "categoria": "mariscos",
+    "img":"img/arrozconmariscos.png",
     "desc": "Arroz mezclado con salsa cremosa picante y mixtura de mariscos"
   },
   {
     "id": 9,
     "nombre": "Ceviche Mixto",
     "categoria": "mariscos",
+    "img":"img/cevichemixto.png",
     "desc": "Mixtura de mariscos y pescado fresco marinado en limón norteño y ají."
   },
   {
     "id": 10,
     "nombre": "Chicharron Mixto",
     "categoria": "mariscos",
+    "img":"img/chicharronmixto.webp",
     "desc": "Mixtura de mariscos y pescado cortado en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla."
   },
   {
     "id": 11,
     "nombre": "Sudado con Mariscos",
     "categoria": "mariscos",
+    "img":"img/sudadoconmariscos.png",
     "desc": "Concentrado de pescado y mariscos con chicha de jora, tomate, cebolla y un toque de ají."
   },
   {
     "id": 12,
     "nombre": "Jalea Mixta",
     "categoria": "mariscos",
+    "img":"img/jaleamixta.png",
     "desc": "Pescado cortado en trozos y mixtura de mariscos crocantes acompañado de yuca frita y sarsa criolla."
   },
   {
     "id": 13,
     "nombre": "Majariscos",
     "categoria": "mariscos",
+    "img":"img/majariscos.png",
     "desc": "Combinación de majado (plátano verde frito y chancado) mezclado con una salsa jugosa de mariscos."
   },
   {
     "id": 14,
     "nombre": "Picante de Mariscos",
     "categoria": "mariscos",
+    "img":"img/picantedemariscos.png",
     "desc": "Guiso de mariscos frescos bañados en salsa cremosa y picante ."
   },
   {
@@ -142,18 +149,21 @@
     "id": 23,
     "nombre": "Dúo Marino",
     "categoria": "duos y rondas",
+    "img":"img/duomarino.png",
     "desc": "Elije tu combinación perfecta, dos platos en uno: Ceviche clásico, un crocante chicharrón de pescado, arroz con mariscos."
   },
   {
     "id": 24,
     "nombre": "Trio Marino",
     "categoria": "duos y rondas",
+    "img":"img/triomarino.png",
     "desc": "Combinación perfecta, tres platos en uno: Ceviche clásico, un crocante chicharrón de pescado y arroz con mariscos."
   },
   {
     "id": 25,
     "nombre": "Ronda Marina",
     "categoria": "duos y rondas",
+    "img":"img/rondamarina.png",
     "desc": "Porciones seleccionas, la combinación perfecta para compartir: Ceviche clásico, crocante chicharrón de pescado, arroz con mariscos y jalea de pescado."
   },
   {
