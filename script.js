@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const descripcionTraducida =
         translations[currentLang]?.[`prod.desc.${producto.id}`] ||
         producto.desc;
+      const precioTraducido =
+        translations[currentLang]?.[`prod.price.${producto.id}`] ||
+        producto.precio;
       const rutaImagenFinal = producto.img || "img/default.png";
 
       tarjetaContenedora.innerHTML = `
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="menu-info">
                   <h3>${nombreTraducido}</h3>
                   <p>${descripcionTraducida}</p>
+                  <p>${precioTraducido}</p>
               </div>
             </article>
             `;

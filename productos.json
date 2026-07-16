@@ -4,209 +4,239 @@
     "nombre": "Ceviche de Filete",
     "categoria": "pescados",
     "img": "img/cevichefilete.png",
-    "desc": "Pescado fresco marinado en limón norteño y ají"
+    "desc": "Pescado fresco marinado en limón norteño y ají",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 2,
     "nombre": "Ceviche de Caballa",
     "categoria": "pescados",
     "img": "img/cevichecaballa.png",
-    "desc": "Caballa fresca marinada en limón norteño y especias"
+    "desc": "Caballa fresca marinada en limón norteño y especias",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 3,
     "nombre": "Sudado de Pescado",
     "categoria": "pescados",
     "img": "img/sudadopescado.png",
-    "desc": "Concentrado de pescado con chicha de jora, tomate, cebolla y un toque de ají."
+    "desc": "Concentrado de pescado con chicha de jora, tomate, cebolla y un toque de ají.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 4,
     "nombre": "Pasado por Agua",
     "categoria": "pescados",
     "img": "img/pasadoporagua.png",
-    "desc": "Pescado pasado por agua caliente acompañado con yuca y sarsa criolla."
+    "desc": "Pescado pasado por agua caliente acompañado con yuca y sarsa criolla.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 5,
     "nombre": "Chicharron",
     "categoria": "pescados",
     "img": "img/chicharronpescado.png",
-    "desc": "Pescado cortar en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla"
+    "desc": "Pescado cortar en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 6,
     "nombre": "Jalea",
     "categoria": "pescados",
     "img": "img/jaleapescado.png",
-    "desc": "Pescado cortado en trozos crocante acompañado de yuca frita y sarsa criolla"
+    "desc": "Pescado cortado en trozos crocante acompañado de yuca frita y sarsa criolla",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 7,
     "nombre": "Frito",
     "categoria": "pescados",
     "img": "img/frito.jpeg",
-    "desc": "Pieza de pescado frito acompañado de arroz, plátanos y sarsa criolla"
+    "desc": "Pieza de pescado frito acompañado de arroz, plátanos y sarsa criolla",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 8,
     "nombre": "Arroz con Mariscos",
     "categoria": "mariscos",
     "img":"img/arrozconmariscos.png",
-    "desc": "Arroz mezclado con salsa cremosa picante y mixtura de mariscos"
+    "desc": "Arroz mezclado con salsa cremosa picante y mixtura de mariscos",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 9,
     "nombre": "Ceviche Mixto",
     "categoria": "mariscos",
     "img":"img/cevichemixto.png",
-    "desc": "Mixtura de mariscos y pescado fresco marinado en limón norteño y ají."
+    "desc": "Mixtura de mariscos y pescado fresco marinado en limón norteño y ají.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 10,
     "nombre": "Chicharron Mixto",
     "categoria": "mariscos",
     "img":"img/chicharronmixto.webp",
-    "desc": "Mixtura de mariscos y pescado cortado en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla."
+    "desc": "Mixtura de mariscos y pescado cortado en tiras pequeñas fritas y crocantes acompañadas de yuca frita y sarsa criolla.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 11,
     "nombre": "Sudado con Mariscos",
     "categoria": "mariscos",
     "img":"img/sudadoconmariscos.png",
-    "desc": "Concentrado de pescado y mariscos con chicha de jora, tomate, cebolla y un toque de ají."
+    "desc": "Concentrado de pescado y mariscos con chicha de jora, tomate, cebolla y un toque de ají.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 12,
     "nombre": "Jalea Mixta",
     "categoria": "mariscos",
     "img":"img/jaleamixta.png",
-    "desc": "Pescado cortado en trozos y mixtura de mariscos crocantes acompañado de yuca frita y sarsa criolla."
+    "desc": "Pescado cortado en trozos y mixtura de mariscos crocantes acompañado de yuca frita y sarsa criolla.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 13,
     "nombre": "Majariscos",
     "categoria": "mariscos",
     "img":"img/majariscos.png",
-    "desc": "Combinación de majado (plátano verde frito y chancado) mezclado con una salsa jugosa de mariscos."
+    "desc": "Combinación de majado (plátano verde frito y chancado) mezclado con una salsa jugosa de mariscos.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 14,
     "nombre": "Picante de Mariscos",
     "categoria": "mariscos",
     "img":"img/picantedemariscos.png",
-    "desc": "Guiso de mariscos frescos bañados en salsa cremosa y picante ."
+    "desc": "Guiso de mariscos frescos bañados en salsa cremosa y picante .",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 15,
     "nombre": "Lomo Saltado",
     "categoria": "carnes y pollos",
     "img":"img/lomosaltado.png",
-    "desc": "Carne de res cortada en cubos salteada con cebolla, tomate y papas."
+    "desc": "Carne de res cortada en cubos salteada con cebolla, tomate y papas.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 16,
     "nombre": "Pollo a la Plancha",
     "categoria": "carnes y pollos",
     "img":"img/polloplancha.jpeg",
-    "desc": "Filete de res cocinado con poco aceite acompañada con arroz y papas fritas."
+    "desc": "Filete de res cocinado con poco aceite acompañada con arroz y papas fritas.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 17,
     "nombre": "Lomo a lo Pobre",
     "categoria": "carnes y pollos",
     "img":"img/lomopobre.png",
-    "desc": "Filete de res frito acompañado con huevo a la inglesa, arroz, plátanos y papas fritas."
+    "desc": "Filete de res frito acompañado con huevo a la inglesa, arroz, plátanos y papas fritas.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 18,
     "nombre": "Pollo Saltado",
     "categoria": "carnes y pollos",
     "img":"img/pollosaltado.png",
-    "desc": "Pollo cortado en cubos salteado con cebolla, tomate y papas."
+    "desc": "Pollo cortado en cubos salteado con cebolla, tomate y papas.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 19,
     "nombre": "Chicharron de Pollo",
     "categoria": "carnes y pollos",
     "img":"img/chicharrondepollo.png",
-    "desc": "Pollo cortado en tiras pequeñas fritas y crocantes acompañadas con papas fritas y cremas."
+    "desc": "Pollo cortado en tiras pequeñas fritas y crocantes acompañadas con papas fritas y cremas.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 20,
     "nombre": "Chaufa de Pollo",
     "categoria": "carnes y pollos",
     "img":"img/chaufapollo.png",
-    "desc": "Salteado de arroz con trozos de pollo, huevo, verduras y salsa de soja, cocinado a fuego muy alto."
+    "desc": "Salteado de arroz con trozos de pollo, huevo, verduras y salsa de soja, cocinado a fuego muy alto.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 21,
     "nombre": "Chaufa de Carne",
     "categoria": "carnes y pollos",
     "img":"img/chaufacarne.png",
-    "desc": "Salteado de arroz con trozos de carne, huevo, verduras y salsa de soja, cocinado a fuego muy alto."
+    "desc": "Salteado de arroz con trozos de carne, huevo, verduras y salsa de soja, cocinado a fuego muy alto.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 22,
     "nombre": "Milanesa de Pollo",
     "categoria": "carnes y pollos",
     "img":"img/milanesapollo.png",
-    "desc": "Filete fino de pechuga de pollo que se pasa por harina, huevo batido y pan rallado, para luego freírse."
+    "desc": "Filete fino de pechuga de pollo que se pasa por harina, huevo batido y pan rallado, para luego freírse.",
+    "precio": "A partir de S/15.00"
   },
   {
     "id": 23,
     "nombre": "Dúo Marino",
     "categoria": "duos y rondas",
     "img":"img/duomarino.png",
-    "desc": "Elije tu combinación perfecta, dos platos en uno: Ceviche clásico, un crocante chicharrón de pescado, arroz con mariscos."
+    "desc": "Elije tu combinación perfecta, dos platos en uno: Ceviche clásico, un crocante chicharrón de pescado, arroz con mariscos.",
+    "precio": "A partir de S/25.00"
   },
   {
     "id": 24,
     "nombre": "Trio Marino",
     "categoria": "duos y rondas",
     "img":"img/triomarino.png",
-    "desc": "Combinación perfecta, tres platos en uno: Ceviche clásico, un crocante chicharrón de pescado y arroz con mariscos."
+    "desc": "Combinación perfecta, tres platos en uno: Ceviche clásico, un crocante chicharrón de pescado y arroz con mariscos.",
+    "precio": "A partir de S/35.00"
   },
   {
     "id": 25,
     "nombre": "Ronda Marina",
     "categoria": "duos y rondas",
     "img":"img/rondamarina.png",
-    "desc": "Porciones seleccionas, la combinación perfecta para compartir: Ceviche clásico, crocante chicharrón de pescado, arroz con mariscos y jalea de pescado."
+    "desc": "Porciones seleccionas, la combinación perfecta para compartir: Ceviche clásico, crocante chicharrón de pescado, arroz con mariscos y jalea de pescado.",
+    "precio": "A partir de S/70.00"
   },
   {
     "id": 26,
     "nombre": "Clarito",
     "categoria": "bebidas",
     "img":"img/clarito.png",
-    "desc": "Bebida refrescante y suave tradicional del norte peruano."
+    "desc": "Bebida refrescante y suave tradicional del norte peruano.",
+    "precio": "A partir de S/5.00"
   },
   {
     "id": 27,
     "nombre": "Chicha de jora",
     "categoria": "bebidas",
     "img":"img/chichajora.png",
-    "desc": "Bebida ancestral elaborada a base de maíz malteado o germinado, tradicional del norte peruano."
+    "desc": "Bebida ancestral elaborada a base de maíz malteado o germinado, tradicional del norte peruano.",
+    "precio": "A partir de S/5.00"
   },
   {
     "id": 28,
     "nombre": "Inka Cola",
     "categoria": "bebidas",
     "img":"img/inkacola.png",
-    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar."
+    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar.",
+    "precio": "A partir de S/5.00"
   },
   {
     "id": 29,
     "nombre": "Coca Cola",
     "categoria": "bebidas",
     "img":"img/cocacola.png",
-    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar."
+    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar.",
+    "precio": "A partir de S/5.00"
   },
   {
     "id": 30,
     "nombre": "Guaraná",
     "categoria": "bebidas",
     "img":"img/guarana.png",
-    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar."
+    "desc": "Bebida gaseosa en diferentes formatos: personal, mediano y familiar.",
+    "precio": "A partir de S/4.00"
   }
 ]
