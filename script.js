@@ -269,7 +269,6 @@ document.addEventListener("keydown", (eventoTeclado) => {
   if (eventoTeclado.key === "ArrowRight") moveLightbox(1);
 });
 
-// Sistema de Calificación (Solo Click)
 const stars = document.querySelectorAll(".star");
 let selectedRating = 0;
 
@@ -277,7 +276,6 @@ stars.forEach((estrellaIndividual) => {
   estrellaIndividual.addEventListener("click", () => {
     selectedRating = parseInt(estrellaIndividual.dataset.val);
     
-    // Solo actualizamos las estrellas al hacer clic
     stars.forEach((estrella) => {
       estrella.classList.toggle(
         "lit",
@@ -287,7 +285,6 @@ stars.forEach((estrellaIndividual) => {
   });
 });
 
-// --- Lógica directa: 1 vez el hash, 1 sola comparación ---
 
 async function sha256(mensaje) {
   const msgUint8 = new TextEncoder().encode(mensaje);
@@ -297,7 +294,6 @@ async function sha256(mensaje) {
     .join("");
 }
 
-// Obtenemos el hash de la fecha DE UNA VEZ
 async function obtenerHashValido() {
   const hoy = new Date();
   const fechaStr = `CUPON-${String(hoy.getDate()).padStart(2, '0')}${String(hoy.getMonth() + 1).padStart(2, '0')}${hoy.getFullYear()}`;
@@ -311,7 +307,6 @@ document.getElementById("btn-validar").addEventListener("click", async () => {
   const cincoDigitosValidos = hashValido.substring(0, 5);
 
   if (input === cincoDigitosValidos) {
-    // Aquí concatenas selectedRating
     const mensaje = `Hola, he canjeado el cupón ${input} y calificado el servicio con ${selectedRating} estrellas.`;
     const waUrl = `https://wa.me/51942061699?text=${encodeURIComponent(mensaje)}`;
     
@@ -321,7 +316,6 @@ document.getElementById("btn-validar").addEventListener("click", async () => {
   }
 });
 
-// Animaciones de Aparición (Scroll Reveal)
 const revealEls = document.querySelectorAll(
   ".menu-card, .gallery-item, .historia-img-wrap, .contact-card, .coupon-box",
 );
