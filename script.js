@@ -286,62 +286,38 @@ stars.forEach((estrellaIndividual) => {
     });
   });
 });
-// Validación de Cupones de Descuento
-const VALID_HASHES = new Set([
-  "a5a3f89e9fb1f98b4a39c1bfec97f453f43b1e84e07e5f92c0d77b68f96ac50a", // MIYESSENIA2025
-  "7b05a8c3e921042f21dc6a2a41c820e78cbce2e23f9f1c9d9ed98e1e52c7a311", // CANCAS2026
-  "1e4a06c7b93040a0f5bab7e823d8ee7c9b1f04cc2fc9c7c1d5e77ec4b7a50e8d", // YESSENIA10
-]);
 
-async function sha256(textoPlanoMensaje) {
-  const bytesMensaje = new TextEncoder().encode(
-    textoPlanoMensaje.toUpperCase().trim(),
-  );
-  const bufferResultadoHash = await window.crypto.subtle.digest(
-    "SHA-256",
-    bytesMensaje,
-  );
-  return Array.from(new Uint8Array(bufferResultadoHash))
-    .map((byteIndividual) => byteIndividual.toString(16).padStart(2, "0"))
+// --- Lógica directa: 1 vez el hash, 1 sola comparación ---
+
+async function sha256(mensaje) {
+  const msgUint8 = new TextEncoder().encode(mensaje);
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
     .join("");
 }
 
+// Obtenemos el hash de la fecha DE UNA VEZ
+async function obtenerHashValido() {
+  const hoy = new Date();
+  const fechaStr = `CUPON-${String(hoy.getDate()).padStart(2, '0')}${String(hoy.getMonth() + 1).padStart(2, '0')}${hoy.getFullYear()}`;
+  const hashCompleto = await sha256(fechaStr);
+  return hashCompleto.substring(0, 5); // Retorna los 5 caracteres
+}
+
 document.getElementById("btn-validar").addEventListener("click", async () => {
-  const textoIntroducidoCupon = document
-    .getElementById("coupon-input")
-    .value.trim();
-  const parrafoEstadoCupon = document.getElementById("coupon-status");
-  const diccionarioTraduccionesActivo = translations[currentLang];
-  parrafoEstadoCupon.className = "";
+  const input = document.getElementById("coupon-input").value.trim();
+  const hashValido = await sha256(`CUPON-${String(new Date().getDate()).padStart(2, '0')}${String(new Date().getMonth() + 1).padStart(2, '0')}${new Date().getFullYear()}`);
+  const cincoDigitosValidos = hashValido.substring(0, 5);
 
-  if (!textoIntroducidoCupon) {
-    parrafoEstadoCupon.textContent =
-      diccionarioTraduccionesActivo["cupones.empty"];
-    parrafoEstadoCupon.className = "error";
-    return;
-  }
-
-  const hashTextoIntroducido = await sha256(textoIntroducidoCupon);
-  const arregloCuponesUsados = JSON.parse(
-    localStorage.getItem("usedCoupons") || "[]",
-  );
-
-  if (arregloCuponesUsados.includes(hashTextoIntroducido)) {
-    parrafoEstadoCupon.textContent =
-      "Este cupón ya fue canjeado anteriormente.";
-    parrafoEstadoCupon.className = "error";
-    return;
-  }
-
-  if (VALID_HASHES.has(hashTextoIntroducido)) {
-    parrafoEstadoCupon.textContent =
-      diccionarioTraduccionesActivo["cupones.ok"];
-    arregloCuponesUsados.push(hashTextoIntroducido);
-    localStorage.setItem("usedCoupons", JSON.stringify(arregloCuponesUsados));
+  if (input === cincoDigitosValidos) {
+    // Aquí concatenas selectedRating
+    const mensaje = `Hola, he canjeado el cupón ${input} y calificado el servicio con ${selectedRating} estrellas.`;
+    const waUrl = `https://wa.me/51942061699?text=${encodeURIComponent(mensaje)}`;
+    
+    window.location.href = waUrl;
   } else {
-    parrafoEstadoCupon.textContent =
-      diccionarioTraduccionesActivo["cupones.err"];
-    parrafoEstadoCupon.className = "error";
+    document.getElementById("coupon-status").textContent = "Cupón inválido.";
   }
 });
 
